@@ -1,15 +1,9 @@
 ﻿using System.Xml;
-using System.Runtime;
-namespace SaveSystem
-{
-    public static class SaveSystem
-    {
-        public static string Path { get; set; } = null;
-        private static XmlWriter writer;
-        private static XmlReader reader;
-        private static XmlWriterSettings settings;
-        private static System.Xml.Serialization.XmlSerializer serializer;
 
+namespace VistraFileSystem
+{
+    public class SaveSystem : FileSystem
+    {
         static SaveSystem()
         {
             settings = new XmlWriterSettings();

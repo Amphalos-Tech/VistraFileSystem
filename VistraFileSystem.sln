@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveSystem", "SaveSystem.csproj", "{6D636A25-4EEE-4C1D-B278-D8C35EF9C767}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistraFileSystem", "VistraFileSystem.csproj", "{6D636A25-4EEE-4C1D-B278-D8C35EF9C767}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

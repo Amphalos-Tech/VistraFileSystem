@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Xml;
 
-namespace SaveSystem
+namespace VistraFileSystem
 {
     public static class XmlEncryptionHelper
     {

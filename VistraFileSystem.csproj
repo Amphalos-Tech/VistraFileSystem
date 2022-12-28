@@ -7,8 +7,8 @@
     <ProjectGuid>{6D636A25-4EEE-4C1D-B278-D8C35EF9C767}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VistraSaveSystem</RootNamespace>
-    <AssemblyName>VistraSaveSystem</AssemblyName>
+    <RootNamespace>VistraFileSystem</RootNamespace>
+    <AssemblyName>VistraFileSystem</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -60,6 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DialogueBlock.cs" />
+    <Compile Include="DialogueSystem.cs" />
+    <Compile Include="FileSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveFile.cs" />
     <Compile Include="SaveSystem.cs" />

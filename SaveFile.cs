@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SaveSystem
+namespace VistraFileSystem
 {
     [Serializable]
     public class SaveFile
@@ -9,7 +9,7 @@ namespace SaveSystem
         {
             Stage = GameStage.Tutorial;
             Upgrades = new byte[]{ 0, 0};
-            Settings = new byte[] { 100, 100, 100, 100, 0};
+            Settings = new byte[] { 100, 100, 100, 100, 0, 1, 1}; //Max volume all, Max Quality, Medium Text Size, Fast Text Speed
         }
         public enum GameStage //Represents the point the user saved at
         {
