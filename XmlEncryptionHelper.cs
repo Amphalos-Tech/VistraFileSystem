@@ -42,6 +42,8 @@ namespace VistraFileSystem
 
                 encryptedXmlDocument.Save(outputXmlStream);
             }
+
+            File.Delete(inputXmlFilePath);
         }
 
 
@@ -78,6 +80,5 @@ namespace VistraFileSystem
                 }
             }
         }
-
     }
 }

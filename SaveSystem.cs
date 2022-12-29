@@ -1,4 +1,5 @@
 ﻿using System.Xml;
+using System.IO;
 
 namespace VistraFileSystem
 {
@@ -18,6 +19,7 @@ namespace VistraFileSystem
             #pragma warning disable
             SaveFile s = (SaveFile)serializer.Deserialize(reader);
             reader.Close();
+            File.Delete(Path + "output.xml");
             return s;
         }
 

@@ -1,5 +1,6 @@
 ﻿using System.Xml;
 using System.Collections.Generic;
+using System.IO;
 
 namespace VistraFileSystem
 {
@@ -23,6 +24,7 @@ namespace VistraFileSystem
             #pragma warning disable
             List<DialogueBlock> list = (List<DialogueBlock>)serializer.Deserialize(reader);
             reader.Close();
+            File.Delete(outputPath);
             return list;
         }
 
