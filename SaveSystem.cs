@@ -9,22 +9,24 @@ namespace VistraFileSystem
         {
             settings = new XmlWriterSettings();
             settings.Indent = true;
-            serializer = new System.Xml.Serialization.XmlSerializer(typeof(SaveFile));
         }
 
         public static SaveFile Read() //Returns SaveFile object from xml 
         {
-            XmlEncryptionHelper.DecryptXmlFile(Path + "encrypted.xml", Path + "output.xml", Path + "key.xml");
-            reader = XmlReader.Create(Path + "output.xml");
-            #pragma warning disable
+            serializer = new System.Xml.Serialization.XmlSerializer(typeof(SaveFile));
+            var outputPath = Path + "output.xml";
+            XmlEncryptionHelper.DecryptXmlFile(Path + "encrypted.xml", outputPath, Path + "key.xml");
+            reader = XmlReader.Create(outputPath);
+#pragma warning disable
             SaveFile s = (SaveFile)serializer.Deserialize(reader);
             reader.Close();
-            File.Delete(Path + "output.xml");
+            File.Delete(outputPath);
             return s;
         }
 
         public static void Write(SaveFile o) //Serliazes SaveFile object to xml
         {
+            serializer = new System.Xml.Serialization.XmlSerializer(typeof(SaveFile));
             writer = XmlWriter.Create(Path + "save.xml", settings);
             serializer.Serialize(writer, o);
             writer.Close();

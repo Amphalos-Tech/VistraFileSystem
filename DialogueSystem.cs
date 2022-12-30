@@ -10,11 +10,12 @@ namespace VistraFileSystem
         {
             settings = new XmlWriterSettings();
             settings.Indent = true;
-            serializer = new System.Xml.Serialization.XmlSerializer(typeof(List<DialogueBlock>));
         }
 
         public static List<DialogueBlock> Read(SaveFile.GameStage stage) //Returns dialogue list for appropriate stage
         {
+            serializer = new System.Xml.Serialization.XmlSerializer(typeof(List<DialogueBlock>));
+
             var outputPath = Path + "output" + stage + ".xml";
             var encryptedPath = Path + "encrypted" + stage + ".xml";
             var keyPath = Path + "key" + stage + ".xml";
@@ -30,9 +31,12 @@ namespace VistraFileSystem
 
         public static void Write(List<DialogueBlock> dialogueChunk, SaveFile.GameStage stage) //Serliazes dialogue blocks, only for developement use, DO NOT CALL IN BUILD
         {
+            serializer = new System.Xml.Serialization.XmlSerializer(typeof(List<DialogueBlock>));
+
             var rawPath = Path + "rawdialogue" + stage + ".xml";
             var encryptedPath = Path + "encrypted" + stage + ".xml";
             var keyPath = Path + "key" + stage + ".xml";
+
             writer = XmlWriter.Create(rawPath, settings);
             serializer.Serialize(writer, dialogueChunk);
             writer.Close();
