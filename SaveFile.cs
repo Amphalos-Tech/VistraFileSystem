@@ -8,7 +8,7 @@ namespace VistraFileSystem
         public SaveFile()
         {
             Stage = GameStage.Tutorial;
-            Upgrades = new byte[]{ 0, 0};
+            Upgrades = new byte[]{ 0, 0, 0, 0};
             Settings = new byte[] { 100, 100, 100, 100, 0, 1, 1}; //Max volume all, Max Quality, Medium Text Size, Fast Text Speed
         }
         public enum GameStage //Represents the point the user saved at
@@ -26,10 +26,10 @@ namespace VistraFileSystem
         //Property to represent ^
         public GameStage Stage { get; set; } 
 
-        //Level
+        //Level (1-3) - Health, Damage, AmmoGain, DashCooldown 
         public byte[] Upgrades { get; set; }
 
-        //Value (Handled more strictly in load so no need for inbuilt identifiers): Master Voice Music Sfx Quality
+        //Value: Master Voice Music Sfx Quality
         public byte[] Settings { get; set; }
     }
 }
